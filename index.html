@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy New Year 2026</titlyou
+<title>Happy New Year 2026</title>
+
 <style>
     body {
         margin: 0;
@@ -11,12 +12,15 @@
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
+        overflow: hidden;
     }
 
     .container {
         padding: 40px 20px;
         max-width: 800px;
         margin: auto;
+        position: relative;
+        z-index: 2;
     }
 
     .rabbit {
@@ -28,16 +32,17 @@
         color: gold;
         font-size: 28px;
         text-shadow: 0 0 12px gold;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
-    .subtitle {
+    h2 {
         color: cyan;
         font-size: 18px;
         margin-bottom: 25px;
+        font-weight: normal;
     }
 
-    p {
+    .message p {
         font-size: 18px;
         line-height: 1.7;
         margin: 15px 0;
@@ -48,44 +53,70 @@
         font-size: 22px;
     }
 
-    .footer {
-        margin-top: 30px;
-        font-size: 16px;
-        color: #aaa;
+    audio {
+        margin-top: 20px;
     }
 
-    audio {
-        margin-top: 25px;
-        width: 90%;
-        max-width: 300px;
+    /* Fireworks */
+    .firework {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        background: gold;
+        border-radius: 50%;
+        animation: explode 2s infinite;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .firework:nth-child(1) { animation-delay: 0s; }
+    .firework:nth-child(2) { animation-delay: 0.7s; background: cyan; }
+    .firework:nth-child(3) { animation-delay: 1.4s; background: red; }
+
+    @keyframes explode {
+        from {
+            transform: scale(0);
+            opacity: 1;
+        }
+        to {
+            transform: scale(12);
+            opacity: 0;
+        }
     }
 </style>
 </head>
 
 <body>
 
+<!-- Fireworks -->
+<div class="firework"></div>
+<div class="firework"></div>
+<div class="firework"></div>
+
 <div class="container">
 
     <div class="rabbit">🐰</div>
 
     <h1>🎉 HAPPY NEW YEAR 2026 🎉</h1>
+    <h2>Special Wishes for <b>Rabbit</b></h2>
 
-    <div class="subtitle">Special Wishes for Rabbit</div>
+    <div class="message">
+        <p>I will always be there for you — in each and every moment.</p>
+        <p>Every day, I care for you.</p>
+        <p><strong>365 days = 365 ways I care for you.</strong></p>
+        <p>
+            I will always listen to you, support you, understand you,
+            and respect you… always <span class="heart">❤️</span>
+        </p>
+    </div>
 
-    <p>I will always be there for you — in each and every moment.</p>
-
-    <p>Every day, I care for u.</p>
-
-    <p><strong>365 days = 365 ways I care for you.</strong></p>
-
-    <p>
-        I will always listen to you, support you, understand you,
-        and respect you… always <span class="heart">❤️</span>
+    <p style="margin-top:25px; font-size:20px;">
+        🎆 Welcome to a beautiful 2026 🎆
     </p>
 
-    <div class="footer">🎆 Welcome to a beautiful 2026 🎆</div>
-
-    <!-- 🎵 USER MUST TAP PLAY -->
+    <!-- ✅ Audio INSIDE body -->
     <audio controls>
         <source src="music (1).mp3" type="audio/mpeg">
         Your browser does not support audio.
