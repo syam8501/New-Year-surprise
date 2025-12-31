@@ -12,7 +12,6 @@
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-        min-height: 100vh;
     }
 
     .container {
@@ -29,7 +28,7 @@
     h1 {
         color: gold;
         font-size: 28px;
-        text-shadow: 0 0 15px gold;
+        text-shadow: 0 0 12px gold;
         margin-bottom: 20px;
     }
 
@@ -56,22 +55,18 @@
         color: #aaa;
     }
 
-    .tap-note {
-        font-size: 14px;
-        color: #888;
-        margin-top: 15px;
+    audio {
+        margin-top: 25px;
+        width: 90%;
+        max-width: 300px;
     }
 </style>
 </head>
 
 <body>
 
-<!-- Background Music (hidden) -->
-<audio id="bgMusic" loop preload="auto">
-    <source src="music1 (2).mp3" type="audio/mpeg">
-</audio>
-
 <div class="container">
+
     <div class="rabbit">🐰</div>
 
     <h1>🎉 HAPPY NEW YEAR 2026 🎉</h1>
@@ -91,9 +86,13 @@
 
     <div class="footer">🎆 Welcome to a beautiful 2026 🎆</div>
 
-    <div class="tap-note">👆 Tap anywhere to play music</div>
+    <!-- 🎵 USER MUST TAP PLAY -->
+    <audio controls>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
 </div>
 
-<script>
-    // Play music on first tap (mobile-safe)
-    document
+</body>
+</html>
