@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Happy New Year 2026</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
@@ -55,45 +54,74 @@
             font-size: 16px;
             color: #aaa;
         }
+
+        /* Play Button */
+        .play-btn {
+            margin-top: 25px;
+            padding: 12px 25px;
+            font-size: 16px;
+            background: gold;
+            color: black;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 15px gold;
+        }
+
+        .play-btn:hover {
+            background: #ffd700;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Background Music (Hidden) -->
-    <audio autoplay loop hidden>
-        <source src="music1 (2).mp3" type="audio/mpeg">
-    </audio>
+<!-- Audio -->
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
-    <div class="container">
+<div class="container">
 
-        <div class="rabbit">🐰</div>
+    <div class="rabbit">🐰</div>
 
-        <h1>🎉 HAPPY NEW YEAR 2026 🎉</h1>
+    <h1>🎉 HAPPY NEW YEAR 2026 🎉</h1>
 
-        <div class="subtitle">Special Wishes for Rabbit</div>
+    <div class="subtitle">Special Wishes for Rabbit</div>
 
-        <p>
-            I will always be there for you – in each and every moment.
-        </p>
+    <p>
+        I will always be there for you — in each and every moment.
+    </p>
 
-        <p>
-            Every day, I care for you.
-        </p>
-        <p>
-            365 days = 365 ways I care for you.
-        </p>
+    <p>
+        Every day, I care for you.
+    </p>
 
-        <p>
-            I will always listen to you, support you, understand you,
-            and respect you… always <span class="heart">❤</span>
-        </p>
+    <p>
+        365 days = 365 ways I care for you.
+    </p>
 
-        <div class="footer">
-            🎆 Welcome to a beautiful 2026 🎆
-        </div>
+    <p>
+        I will always listen to you, support you, understand you,
+        and respect you… always <span class="heart">❤️</span>
+    </p>
 
+    <!-- Play Music Button -->
+    <button class="play-btn" onclick="playMusic()">
+        🎵 Play Music
+    </button>
+
+    <div class="footer">
+        🎆 Welcome to a beautiful 2026 🎆
     </div>
+
+</div>
+
+<script>
+    function playMusic() {
+        document.getElementById("bgMusic").play();
+    }
+</script>
 
 </body>
 </html>
