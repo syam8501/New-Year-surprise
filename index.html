@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Surprise 🎁</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .hidden { display: none; }
+    .rabbit {
+      font-size: 60px;
+      animation: hop 1s infinite;
+    }
+    @keyframes hop {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Hello 😊</h2>
+<p>I made something special for you</p>
+
+<button onclick="showSurprise()">Click for Surprise 🎁</button>
+
+<div id="surprise" class="hidden">
+  <div class="rabbit">🐰</div>
+  <h1>🎉 HAPPY NEW YEAR 2026 🎉</h1>
+  <h2>Special Wishes for RABBIT 🐰</h2>
+  <p>✨ May this year bring joy, success & happiness ✨</p>
+  <p>🎆 Welcome 2026 🎆</p>
+</div>
+
+<script>
+function showSurprise() {
+  document.getElementById("surprise").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
